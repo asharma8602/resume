@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{blindtext}    %% Creates dummy text
+\usepackage{multicol}     %% Allows to create more than two columns
+\usepackage{array}        %% For adjusting column widths
+\usepackage{color}
+\usepackage{lipsum}
+\usepackage{enumitem}     %% For eliminating space before itemize
+\usepackage{microtype}
+\usepackage[margin=0.75in, top=0.8in, bottom=0.8in]{geometry}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\setlength{\parindent}{0pt} %% no indents in paragraph
+
+\setlist{nosep}
+\pagenumbering{gobble}
+
+\moderncvstyle{banking}
+\moderncvcolor{green}
+\moderncvicons{awesome}
+\definecolor{titlegreen}{RGB}{139,195,74}
+
+\firstname{Yash}
+\familyname{Srivastav}
+\address{Freshman, Computer Science and Engineering}{IIT Kanpur}
+\email{yashsriv@iitk.ac.in}
+\social[github]{yashsriv}
+\homepage{http://home.iitk.ac.in/\textasciitilde{}yashsriv}
+%\quote{Nothing is True, Everything is Permitted}
+
+\newcommand{\education}[5]{
+  \textbf{\large{#1}} \hfill\textit{#2}\\
+  #3 : #4\\
+  #5\\
+  \\
+}
+
+\newcommand{\achievement}[2]{
+  \item #1 \hfill \textit{#2}\vspace{2mm}
+}
+
+\newcommand{\experience}[3]{
+  \item \textbf{\large{#1}} \hfill\textit{#2}\\ \emph{#3}\vspace{2mm}
+}
+\usepackage{utopia}
+\begin{document}
+  \maketitle
+  \section{Educational Qualifications}
+    \education{Bachelor of Technology, Computer Science and Engineering}{July'15-Present}{CPI}{9.44}{Indian Institute of Technology, Kanpur}
+    \education{All India Senior School Certificate Examination(AISSCE) - CBSE}{2015}{Overall Percentage}{96.6\%}{Birla High School, Kolkata}
+    \education{Indian Certificate of Secondary Education(ICSE) - CISCE}{2013}{Overall Percentage}{96.6\%}{The Assembly of God Church School, Kolkata}
+  \section{Academic Achievements and Scholarships}
+    \begin{itemize}
+      \achievement{All India Rank \textbf{105} in Joint Entrance Exam Advanced}{2015}
+      \achievement{All India Rank \textbf{288} in Joint Entrance Exam Mains}{2015}
+      \achievement{Qualified \textbf{pre-final level} of Special Class Railway Apprentice(SCRA) Examination}{2015}
+      \achievement{Qualified National Standard Examination in Chemistry(NSEC)}{2015}
+      \achievement{All India Rank of \textbf{12} in Kishore Vaigyanik Protsahan Yojana}{2015}
+    \end{itemize}
+  \section{Projects}
+    \begin{itemize}
+      \experience{Robocon 2016}{Oct'2015 - Mar'2016}{Supervisor : Prof. Bhaskar Dasgupta (IIT Kanpur)}
+      \begin{itemize}
+        \item Developed two robots out of which one was autonomous\vspace{2mm}
+        \item Game field consisted of ramps and turns\vspace{2mm}
+        \item The autonomous robot, which does not contain a driving actuator, must traverse the game field using the energy provided to it by other robot in form of a non contact force.\vspace{2mm}
+        \item Was Involved in Image processing used in the autonomous robot for color detection and line following\vspace{2mm}
+        \item Came \textbf{3rd} out of 105 teams participating in Nationals at Pune, India\vspace{4mm}
+      \end{itemize}
+      \experience{Code.Fun.Do}{Sep'2015}{Microsoft India}
+      \begin{itemize}
+        \item Developed an App to help connect teachers and learners in a 24 Hour Hackathon\vspace{2mm}
+        \item Used cross-platform Universal App Platform for Windows 10 \vspace{2mm}
+        \item Was selected as one of the best five ideas \vspace{4mm}
+      \end{itemize}
+      \newpage
+      \experience{Connect 4}{}{Artificial Intelligence}
+      \begin{itemize}
+        \item Developed a Java Application to play a game of connect 4\vspace{2mm}
+        \item Uses optimized negamax algorithm\vspace{2mm}
+        \item Link : \href{http://github.com/yashsriv/Connect-4}{Connect 4}\vspace{4mm}
+      \end{itemize}
+    \end{itemize}
+  \section{Technical Skills}
+    \begin{tabular}{L{0.05cm} L{4cm} l}
+      & Computer Languages   & C/C++, C\#, Java, Python, Javascript(Beginner)\vspace{2mm}\\
+      & CAD                  & SolidWorks, AutoCAD \vspace{2mm}\\
+      & Tools                & Git, Vim, \LaTeX \vspace{2mm}\\
+      & Operating Systems    & Windows, Linux(Debian)\vspace{2mm}\\
+      & App Development      & Windows \vspace{2mm}\\
+      & Miscellaneous        & OpenCV, Visual Studio\vspace{2mm}
+    \end{tabular}
+  \section{Other Interests}
+    \begin {itemize}
+  \item Image Processing\vspace{2mm}
+      \item Artificial Intelligence\vspace{2mm}
+      \item Robotics\vspace{2mm}
+      \item Machine Learning\vspace{2mm}
+      \item Web Development\vspace{2mm}
+    \end{itemize}
+\end{document}
