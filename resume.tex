@@ -5,7 +5,7 @@
 \usepackage{color}
 \usepackage{enumitem}     %% For eliminating space before itemize
 \usepackage{microtype}
-\usepackage[margin=0.35in, top=0.2in, bottom=0.8in]{geometry}
+\usepackage[margin=0.2in, top=0.1in, bottom=0.1in]{geometry}
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -40,51 +40,58 @@
 \newcommand{\achievement}[2]{
   \item #1 \hfill \textit{#2}
 }
+\newcommand{\nachievement}[3]{
+  & #1 & #2 & #3
+}
 
 \newcommand{\experience}[3]{
-  \item \textbf{\large{#1}} \hfill\textit{#2}\\ \emph{#3}
+  \item \textbf{\large{#1}} \hfill \emph{#3} \hfill \textit{#2}
 }
 \renewcommand{\familydefault}{pag}
-\linespread{1.3}
+\linespread{1.1}
 \begin{document}
   \makecvtitle
   \section{Educational Qualifications}
-  %\begin{tabular}{L{0.05cm} L{6cm} l L{0.05cm} l l}
-      %\neducation{B.Tech, Computer Science and Engineering}{July'15-Present}{CPI}{9.44}{IIT Kanpur}\\
-      %\neducation{AISSCE - CBSE}{2015}{}{96.6\%}{Birla High School, Kolkata}\\
-      %\neducation{ICSE - CISCE}{2013}{}{96.6\%}{The Assembly of God Church School, Kolkata}
-    %\end{tabular}\\
-    \education{Bachelor of Technology, Computer Science and Engineering}{July'15-Present}{CPI}{9.44}{Indian Institute of Technology, Kanpur}\\
-    \education{All India Senior School Certificate Examination(AISSCE) - CBSE}{2015}{Overall Percentage}{96.6\%}{Birla High School, Kolkata}\\
-    \education{Indian Certificate of Secondary Education(ICSE) - CISCE}{2013}{Overall Percentage}{96.6\%}{The Assembly of God Church School, Kolkata}
+  \begin{tabular}{L{0.05cm} L{6cm} l L{0.05cm} C{8cm} r}
+      \neducation{B.Tech, CSE}{July'15-Present}{CPI}{9.44}{IIT Kanpur}\\
+      \neducation{AISSCE - CBSE}{2015}{}{96.6\%}{Birla High School, Kolkata}\\
+      \neducation{ICSE - CISCE}{2013}{}{96.6\%}{AG Church School, Kolkata}\\
+    \end{tabular}
+    %\education{Bachelor of Technology, Computer Science and Engineering}{July'15-Present}{CPI}{9.44}{Indian Institute of Technology, Kanpur}\\
+    %\education{All India Senior School Certificate Examination(AISSCE) - CBSE}{2015}{Overall Percentage}{96.6\%}{Birla High School, Kolkata}\\
+    %\education{Indian Certificate of Secondary Education(ICSE) - CISCE}{2013}{Overall Percentage}{96.6\%}{The Assembly of God Church School, Kolkata}
   \section{Academic Achievements and Scholarships}
-    \begin{itemize}
-      \achievement{All India Rank \textbf{105} in Joint Entrance Exam Advanced}{2015}
-      \achievement{All India Rank \textbf{288} in Joint Entrance Exam Mains}{2015}
-      \achievement{Qualified \textbf{pre-final level} of Special Class Railway Apprentice (SCRA) Examination}{2015}
-      \achievement{Qualified National Standard Examination in Chemistry (NSEC)}{2015}
-      \achievement{All India Rank of \textbf{12} in Kishore Vaigyanik Protsahan Yojana}{2015}
-    \end{itemize}
+  \begin{tabular}{L{0.05cm} L{6cm} C{8cm} l}
+    \nachievement{JEE Advanced}{2015}{AIR \textbf{105}}\\
+    \nachievement{JEE Mains}{2015}{AIR \textbf{288}}\\
+    \nachievement{NSEC}{2015}{Qualified}\\
+    \nachievement{KVPY}{2015}{AIR \textbf{12}}
+  \end{tabular}
+    %\begin{itemize}
+      %\achievement{All India Rank \textbf{105} in Joint Entrance Exam Advanced}{2015}
+      %\achievement{All India Rank \textbf{288} in Joint Entrance Exam Mains}{2015}
+      %\achievement{Qualified \textbf{pre-final level} of Special Class Railway Apprentice (SCRA) Examination}{2015}
+      %\achievement{Qualified National Standard Examination in Chemistry (NSEC)}{2015}
+      %\achievement{All India Rank of \textbf{12} in Kishore Vaigyanik Protsahan Yojana}{2015}
+    %\end{itemize}
   \section{Projects}
     \begin{itemize}
-      \experience{Robocon 2016}{Oct'2015 - Mar'2016}{Supervisor : Prof. Bhaskar Dasgupta (IIT Kanpur)}
+        \experience{\href{http://students.iitk.ac.in/robocon/}{Robocon 2016}}{Oct'2015 - Mar'2016}{Supervisor : Prof. Bhaskar Dasgupta (IIT Kanpur)}
       \begin{itemize}
-        \item Developed two robots out of which one was autonomous
-        \item Game field consisted of ramps and turns
-        \item The autonomous robot, which does not contain a driving actuator, must traverse the game field using the energy provided to it by other robot in form of a non contact force.
-        \item Was Involved in Image processing used in the autonomous robot for color detection and line following
+        \item Developed two robots out of which one was autonomous on a game field consisting of ramps \& turns. The autonomous robot, which did not contain a driving actuator had to traverse the game field using the energy provided to it by other robot in form of a non contact force.
+        \item I was involved in \textbf{Image Processing} used in the autonomous robot for \textbf{color detection} and \textbf{line following} to traverse the arena
         \item Came \textbf{3rd} out of 105 teams participating in Nationals at Pune, India
       \end{itemize}
       \experience{Code.Fun.Do}{Sep'2015}{Microsoft India 24 Hour Hackathon}
       \begin{itemize}
         \item Developed an App to help connect teachers and learners
-        \item Used cross-platform Universal App Platform for Windows 10
+        \item Used cross-platform \textbf{Universal App Platform} for Windows 10
         \item Was selected as one of the best five ideas
       \end{itemize}
       \experience{Connect 4}{}{Artificial Intelligence}
       \begin{itemize}
         \item Developed a Java Application to play a game of connect 4
-        \item Uses optimized negamax algorithm
+        \item Uses optimized \textbf{negamax algorithm}
         \item Link : \href{http://github.com/yashsriv/Connect-4}{Connect 4}
       \end{itemize}
     \end{itemize}
@@ -97,15 +104,15 @@
       & App Development      & Windows \\
       & Miscellaneous        & OpenCV, Visual Studio, AI and Game Theory
     \end{tabular}
-  \section{Relevant Courses}
-    \begin{tabular}{L{0.05cm} L{6cm} L{5.5cm} L{5.5cm}}
-      & Linear Algebra and O.D.E        & Fundamentals of Computing & Introduction to Mechanics\\
-      & Introduction to Electrodynamics & Introduction to Calculus  & Partial Differential Equations\\
-      & Engineering Graphics            & Introduction to Organic, Inorganic and Physical Chemistry
-    \end{tabular}
+  %\section{Relevant Courses}
+    %\begin{tabular}{L{0.05cm} L{6cm} L{5.5cm} L{5.5cm}}
+      %& Linear Algebra and O.D.E        & Fundamentals of Computing & Introduction to Mechanics\\
+      %& Introduction to Electrodynamics & Introduction to Calculus  & Partial Differential Equations\\
+      %& Engineering Graphics            & Introduction to Organic, Inorganic and Physical Chemistry
+    %\end{tabular}
   \section{Other Interests}
     \begin {itemize}
-  \item Image Processing
+      \item Image Processing
       \item Artificial Intelligence
       \item Robotics
       \item Machine Learning
