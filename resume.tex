@@ -1,11 +1,16 @@
 \documentclass[11pt,a4paper]{moderncv}
 
+\usepackage[utf8]{inputenc}
 \usepackage{multicol}     %% Allows to create more than two columns
 \usepackage{array}        %% For adjusting column widths
 \usepackage{color}
 \usepackage{enumitem}     %% For eliminating space before itemize
 \usepackage{microtype}
 \usepackage[margin=0.2in, top=0.5in, bottom=0.1in]{geometry}
+\usepackage{xcolor}
+\usepackage[unicode]{hyperref}
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=cyan}
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -22,7 +27,7 @@
 
 \firstname{Yash}
 \familyname{Srivastav}
-\address{Freshman}{Computer Science and Engineering}{IIT Kanpur}
+\address{Sophomore}{Computer Science and Engineering}{IIT Kanpur}
 \phone[mobile]{+91~7054133662}
 \email{yashsriv@iitk.ac.in}
 \homepage{home.iitk.ac.in/\textasciitilde yashsriv}
@@ -53,13 +58,10 @@
   \makecvtitle
   \section{Educational Qualifications}
   \begin{tabular}{L{0.05cm} L{6cm} l L{0.05cm} C{8cm} r}
-      \neducation{B.Tech, CSE}{July'15-Present}{CPI}{9.44}{IIT Kanpur}\\
+      \neducation{B.Tech, CSE}{July'15-Present}{CPI}{9.12}{IIT Kanpur}\\
       \neducation{AISSCE - CBSE}{2015}{}{96.6\%}{Birla High School, Kolkata}\\
       \neducation{ICSE - CISCE}{2013}{}{96.6\%}{AG Church School, Kolkata}\\
     \end{tabular}
-    %\education{Bachelor of Technology, Computer Science and Engineering}{July'15-Present}{CPI}{9.44}{Indian Institute of Technology, Kanpur}\\
-    %\education{All India Senior School Certificate Examination(AISSCE) - CBSE}{2015}{Overall Percentage}{96.6\%}{Birla High School, Kolkata}\\
-    %\education{Indian Certificate of Secondary Education(ICSE) - CISCE}{2013}{Overall Percentage}{96.6\%}{The Assembly of God Church School, Kolkata}
   \section{Academic Achievements and Scholarships}
   \begin{tabular}{L{0.05cm} L{6cm} C{8cm} l}
     \nachievement{JEE Advanced}{2015}{AIR \textbf{105}}\\
@@ -67,16 +69,22 @@
     \nachievement{NSEC}{2015}{Qualified}\\
     \nachievement{KVPY}{2015}{AIR \textbf{12}}
   \end{tabular}
-    %\begin{itemize}
-      %\achievement{All India Rank \textbf{105} in Joint Entrance Exam Advanced}{2015}
-      %\achievement{All India Rank \textbf{288} in Joint Entrance Exam Mains}{2015}
-      %\achievement{Qualified \textbf{pre-final level} of Special Class Railway Apprentice (SCRA) Examination}{2015}
-      %\achievement{Qualified National Standard Examination in Chemistry (NSEC)}{2015}
-      %\achievement{All India Rank of \textbf{12} in Kishore Vaigyanik Protsahan Yojana}{2015}
-    %\end{itemize}
   \section{Projects}
     \begin{itemize}
-        \experience{\href{http://students.iitk.ac.in/robocon/}{Robocon 2016}}{Oct'2015 - Mar'2016}{Supervisor : Prof. Bhaskar Dasgupta (IIT Kanpur)}
+      \experience{Development Intern}{Summer 2016}{Supervisor: DoFA IIT Kanpur, Prof. Manindra Agarwal}
+      \begin{itemize}
+        \item Worked on a scalable web application with a large technology stack
+        \item Used Scala with Akka and Couchbase among other technologies for developing the backend
+        \item Internship was under the NYC Office of IIT Kanpur
+      \end{itemize}
+      \experience{Reversi game in Python}{$2^{nd}$ Semester}{ACA Semester Project}
+      \begin{itemize}
+        \item Developed a Python Application for 2 player as well as single player Reversi gameplay in a team of 2
+        \item Uses the basic minimax algorithm with an efficient heuristic check for better performance against humans
+        \item Mid Semester project under the Association of Computing Activities (ACA), IIT Kanpur
+        \item Link : \href{http://github.com/yashsriv/Reversi-Python}{Reversi}
+      \end{itemize}
+      \experience{\href{http://students.iitk.ac.in/robocon/}{Robocon 2016}}{Oct'2015 - Mar'2016}{Supervisor : Prof. Bhaskar Dasgupta (IIT Kanpur)}
       \begin{itemize}
         \item Developed two robots out of which one was autonomous on a game field consisting of ramps \& turns. The autonomous robot, which did not contain a driving actuator had to traverse the game field using the energy provided to it by other robot in form of a non contact force.
         \item I was involved in \textbf{Image Processing} used in the autonomous robot for \textbf{color detection} and \textbf{line following} to traverse the arena
@@ -97,25 +105,18 @@
     \end{itemize}
   \section{Technical Skills}
   \begin{tabular}{L{0.05cm} L{6cm} l}
-      & Computer Languages   & C/C++, C\#, Java, Python, Javascript(Beginner)\\
+      & Computer Languages   & C/C++, C\#, Java, Python, Javascript, Scala\\
       & CAD                  & SolidWorks, AutoCAD \\
-      & Tools                & Git, Vim, \LaTeX \\
+      & Tools                & Git, Vim, \LaTeX, SQL, Couchbase \\
       & Operating Systems    & Windows, Linux(Debian)\\
       & App Development      & Windows \\
       & Miscellaneous        & OpenCV, Visual Studio, AI and Game Theory
     \end{tabular}
-  %\section{Relevant Courses}
-    %\begin{tabular}{L{0.05cm} L{6cm} L{5.5cm} L{5.5cm}}
-      %& Linear Algebra and O.D.E        & Fundamentals of Computing & Introduction to Mechanics\\
-      %& Introduction to Electrodynamics & Introduction to Calculus  & Partial Differential Equations\\
-      %& Engineering Graphics            & Introduction to Organic, Inorganic and Physical Chemistry
-    %\end{tabular}
   \section{Other Interests}
     \begin {itemize}
+      \item Web Development
       \item Image Processing
       \item Artificial Intelligence
       \item Robotics
-      \item Machine Learning
-      \item Web Development
     \end{itemize}
 \end{document}
