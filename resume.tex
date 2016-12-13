@@ -1,132 +1,258 @@
-\documentclass[11pt,a4paper]{moderncv}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[utf8]{inputenc}
-\usepackage{multicol}     %% Allows to create more than two columns
-\usepackage{array}        %% For adjusting column widths
-\usepackage{color}
-\usepackage{enumitem}     %% For eliminating space before itemize
-\usepackage{microtype}
-\usepackage[margin=0.2in, top=0.5in, bottom=0.1in]{geometry}
-\usepackage{xcolor}
-\usepackage[unicode]{hyperref}
-
-\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=cyan}
-
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
-\setlength{\parindent}{0pt} %% no indents in paragraph
-
-\setlist{nosep}
-\pagenumbering{gobble}
-
-\moderncvstyle{banking}
-\moderncvcolor{blue}
-\moderncvicons{awesome}
-
-\firstname{Yash}
-\familyname{Srivastav}
-\address{Sophomore}{Computer Science and Engineering}{IIT Kanpur}
-\phone[mobile]{+91~7054133662}
-\email{yashsriv@iitk.ac.in}
-\homepage{cse.iitk.ac.in/users/yashsriv}
-\social[github]{yashsriv}
-\photo[64pt][0.4pt]{picture}
-
-\newcommand{\education}[5]{
-  \textbf{\large{#1}} \hfill\textit{#2}\\
-  #5 \hfill \large{#3 : \textbf{#4}}
-}
-\newcommand{\neducation}[5]{
-  & #1 & #2 & &#5 & #3 : #4
-}
-
-\newcommand{\achievement}[2]{
-  \item #1 \hfill \textit{#2}
-}
-\newcommand{\nachievement}[3]{
-  & #1 & #2 & #3
-}
-
-\newcommand{\experience}[3]{
-  \item \textbf{\large{#1}} \hfill \emph{#3} \hfill \textit{#2}
-}
-\renewcommand{\familydefault}{pag}
-\linespread{1.1}
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
 \begin{document}
-  \makecvtitle
-  \section{Educational Qualifications}
-  \begin{tabular}{L{0.05cm} L{6cm} l L{0.05cm} C{8cm} r}
-      \neducation{B.Tech, CSE}{July'15-Present}{CPI}{9.12}{IIT Kanpur}\\
-      \neducation{AISSCE - CBSE}{2015}{}{96.6\%}{Birla High School, Kolkata}\\
-      \neducation{ICSE - CISCE}{2013}{}{96.6\%}{AG Church School, Kolkata}\\
-    \end{tabular}
-  \section{Academic Achievements and Scholarships}
-  \begin{tabular}{L{0.05cm} L{6cm} C{8cm} l}
-    \nachievement{JEE Advanced}{2015}{AIR \textbf{105}}\\
-    \nachievement{JEE Mains}{2015}{AIR \textbf{288}}\\
-    \nachievement{NSEC}{2015}{Qualified}\\
-    \nachievement{KVPY}{2015}{AIR \textbf{12}}
-  \end{tabular}
-  \section{Projects}
-    \begin{itemize}
-        \experience{Development Intern}{Summer 2016}{Supervisor: Prof. Manindra Agarwal, IIT Kanpur}
-      \begin{itemize}
-        \item Worked on a scalable web application with a diverse technology stack
-        \item Used Scala with Akka and Couchbase among other technologies for developing the backend
-        \item Internship was under the NYC Office of IIT Kanpur
-      \end{itemize}
-      \experience{Smart Mirror}{Summer 2016}{Programming Club IIT Kanpur}
-      \begin{itemize}
-        \item A mirror to get you ready for the day.
-        \item Chosen as the \textbf{Best Applicative Project - SnT Summer Camp 2016}
-        \item Link : \href{https://pclub.in/project/2016/07/06/smartmirror.html}{Smart Mirror}
-      \end{itemize}
-      \experience{Reversi game in Python}{$2^{nd}$ Semester}{ACA Semester Project}
-      \begin{itemize}
-        \item Developed a Python Application for 2 player as well as single player Reversi gameplay in a team of 2
-        \item Uses the basic minimax algorithm with an efficient heuristic check for better performance against humans
-        \item Mid Semester project under the Association of Computing Activities (ACA), IIT Kanpur
-        \item Link : \href{http://github.com/yashsriv/Reversi-Python}{Reversi}
-      \end{itemize}
-      \experience{\href{http://students.iitk.ac.in/robocon/}{Robocon 2016}}{Oct'2015 - Mar'2016}{Supervisor : Prof. Bhaskar Dasgupta (IIT Kanpur)}
-      \begin{itemize}
-        \item Developed two robots out of which one was autonomous on a game field consisting of ramps \& turns. The autonomous robot, which did not contain a driving actuator had to traverse the game field using the energy provided to it by other robot in form of a non contact force.
-        \item I was involved in \textbf{Image Processing} used in the autonomous robot for \textbf{color detection} and \textbf{line following} to traverse the arena
-        \item Came \textbf{3rd} out of 105 teams participating in Nationals at Pune, India
-      \end{itemize}
-      \experience{Code.Fun.Do}{Sep'2015}{Microsoft India 24 Hour Hackathon}
-      \begin{itemize}
-        \item Developed an App to help connect teachers and learners
-        \item Used cross-platform \textbf{Universal App Platform} for Windows 10
-        \item Was selected as one of the best five ideas
-      \end{itemize}
-    \end{itemize}
-  \section{Technical Skills}
-  \begin{tabular}{L{0.05cm} L{6cm} l}
-      & Computer Languages   & C/C++, C\#(Beginner), Java, Python, Javascript, Scala\\
-      & Tools                & Git, Vim, \LaTeX, SQL, Couchbase, MongoDB, nodejs \\
-      & Operating Systems    & Windows, Linux(Debian, Ubuntu, Arch)\\
-      & App Development      & Windows, Android \\
-      & Miscellaneous        & OpenCV, Visual Studio, AI and Game Theory
-    \end{tabular}
-  \section{Other Projects}
-  \begin{itemize}
-    \experience{Google DevFest}{Oct'2016}{Google 24 Hour Hackathon}
-    \begin{itemize}
-      \item Developed a simple Android App which acts as a WebSocket Client for a WebSocket Server for the Real Life Game Mafia
-    \end{itemize}
-    \experience{Antaragni 16 WebApp}{2016}{Nodejs backend for a fest registration portal}
-    \begin{itemize}
-      \item Backend written in nodejs and mongodb
-    \end{itemize}
-  \end{itemize}
-  \section{Other Interests}
-    \begin {itemize}
-      \item Web Development
-      \item Image Processing
-      \item Artificial Intelligence
-      \item Robotics
-    \end{itemize}
-\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myheader}[5]{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node (box) at (current page.north) [shape=rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=105pt] {};
+    \node (name) at (box) [anchor=south]{%
+      \fontsize{40pt}{60pt}
+      \color{white}
+      \fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1
+      \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
+    };
+    \node (lineone) at (name.south) [anchor=north]{%
+      \color{white}
+      \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{9pt}{12pt}\selectfont #3
+    };
+    \node (linetwo) at (lineone.south) [anchor=north] {%
+      \color{white}
+      \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #4
+    };
+    \node (linethree) at (linetwo.south) [anchor=north] {%
+      \color{white}
+      \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #5
+    };
+  \end{tikzpicture}%
+  \vspace{60pt}
+ }
+
+\ifdefined\cvprint
+\namesection{Yash}{Srivastav}{%
+  Sophomore \textbullet{} Computer Science and Engineering \\ \vspace{5pt}
+  \faGlobe\enspace\urlstyle{same}\href{https://yashsriv.org}{yashsriv.org}%
+  \enspace| \enspace%
+  \faEnvelopeO\enspace\href{mailto:yashsriv@cse.iitk.ac.in}{yashsriv@(cse.)iitk.ac.in}%
+  \enspace| \enspace%
+  \faGithubAlt\enspace\href{https://github.com/yashsriv}{yashsriv}%
+  \enspace| \enspace%
+  \faLinkedin\enspace\href{https://www.linkedin.com/in/yashsriv}{yashsriv}
+}
+\else
+  \myheader{Yash}{Srivastav}{Sophomore \textbullet{} Computer Science and Engineering}{%
+    \faGlobe\enspace\urlstyle{same}\href{https://yashsriv.org}{yashsriv.org}%
+    \enspace| \enspace%
+    \faEnvelopeO\enspace\href{mailto:yashsriv@cse.iitk.ac.in}{yashsriv@(cse.)iitk.ac.in}
+  }{%
+    \faGithubAlt\enspace\href{https://github.com/yashsriv}{yashsriv}%
+    \enspace| \enspace%
+    \faLinkedin\enspace\href{https://www.linkedin.com/in/yashsriv}{yashsriv}
+  }
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{IIT Kanpur}
+\descript{B.Tech in Computer Science and Engineering}
+\location{July 2015-Present | CPI:\@ \textbf{9.1/10.0}}
+\sectionsep{}
+
+\subsection{Birla High School}
+\descript{AISSCE, CBSE, Overall: \textbf{96.6\%}}
+\location{May 2013 | Kolkata, India}
+\sectionsep{}
+
+\subsection{A.G. Church School}
+\descript{ISCE, CISCE, Overall: \textbf{96.6\%}}
+\location{May 2015 |  Kolkata, India}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+% Facebook:// \href{https://facebook/yash98}{\bf yash98} \\
+Github:// \href{https://github.com/yashsriv}{\bf yashsriv} \\
+LinkedIn://  \href{https://www.linkedin.com/in/yashsriv}{\bf yashsriv} \\
+% Twitter://  \href{https://twitter.com/therealyashsriv}{\bf @therealyashsriv} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{CS Coursework}
+Introduction to Programming (A*) \\
+Discrete Mathematics \\
+Logic in Computer Science \\
+Computer Organization (\textit{i}) \\
+Data Structures \& Algorithms (\textit{i}) \\
+Probability \& Statistics (\textit{i}) \\
+{\footnotesize \textit{\textbf{(A* Exceptional Performance) \enspace{} (\textit{i} Ongoing Courses)}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Java \textbullet{}   Shell \textbullet{} Python \textbullet{} Javascript \\
+\LaTeX{} \textbullet{} C \textbullet{} C++ \textbullet{} CSS \textbullet{} Scala \\
+\location{Familiar:}
+C\# \textbullet{} Android \textbullet{} Typescript
+\subsection{Web Development}
+Full MEAN Stack \textbullet{} Scala with Akka \\
+AngularJS 1
+\subsection{Operating Systems}
+Arch Linux \textbullet{} Debian \textbullet{} Ubuntu \\
+Microsoft Windows
+\subsection{Utilities}
+Git \textbullet{} Vim \textbullet{} SQL \\
+MongoDB \textbullet{} OpenCV \textbullet{} nginx \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interests}
+Web Development \textbullet{} Image Processing \\
+Artificial Intelligence \textbullet{} Robotics \\
+Capture The Flag Contests \textbullet{} Open Source
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience and Projects}
+\runsubsection{Backend Developer}
+\descript{| Since May'16}
+\location{Internship under Prof.\@ Manindra Agarwal, IIT Kanpur}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+  \item Worked on a scalable web application with a diverse technology stack.
+  \item Used Scala with Akka and Couchbase among other technologies for
+    developing the backend.
+  \item	Implemented Notifications, XSRF \& XSSI Protection and a method
+    to batch process api requests as part of the backend api.
+\end{tightemize}
+
+\runsubsection{Senior Web Executive}
+\descript{| Antaragni 2016 }
+\location{July 2016-Nov 2016}
+\begin{tightemize}
+  \item Used the full MEAN Stack for a fest registration portal, dynamic website
+    and its admin control panel.
+  \item Support for Android App as well.
+  \item Technologies Used - NodeJS, AngularJS, MongoDB, ExpressJS and more.
+\end{tightemize}
+
+\runsubsection{\href{http://students.iitk.ac.in/robocon/}{Robocon 2016}}
+\descript{| Oct'2015-Mar'2016}
+\location{Supervisor: Prof.\@ Bhaskar Dasgupta, IIT Kanpur}
+\begin{tightemize}
+  \item An autonomous robot, which did not contain a driving actuator had to
+    traverse a game field using the energy provided to it by another robot in
+    form of a non contact force.
+  \item I was involved in \textbf{Image Processing} used in the autonomous
+    robot for \textbf{color detection} and \textbf{line following} to traverse the arena
+  \item Came \textbf{3\textsuperscript{rd}} out of 105 teams participating in Nationals at Pune, India
+\end{tightemize}
+
+\runsubsection{Reversi game in Python}
+\descript{| 2\textsuperscript{nd} Semester}
+\location{ACA Semester Project}
+\begin{tightemize}
+  \item Developed a Python Application using Pygame for 2 player as well as
+    single player Reversi gameplay in a team of 2
+  \item Uses the negamax algorithm with an efficient heuristic check
+    for better performance against humans
+  \item Mid Semester project under the Association of Computing Activities (ACA), IIT Kanpur
+  \item Link: \href{http://github.com/yashsriv/Reversi-Python}{Reversi}
+\end{tightemize}
+
+\runsubsection{Code.Fun.Do}
+\descript{| Sep'2015}
+\location{Microsoft India, 24 Hour Hackathon}
+\begin{tightemize}
+  \item Developed an App to help connect teachers and learners
+  \item Used cross-platform \textbf{Universal App Platform} for Windows 10
+    and a server written in C\#
+  \item Was selected as one of the best five ideas
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards and Achievements} 
+\begin{tabular}{rll}
+  2015	   & \textbf{AIR} 105 & JEE Advanced 2015\\
+  2015	   & \textbf{AIR} 288 & JEE Mains 2015\\
+  2015	   & \textbf{AIR} 12  & KVPY Fellowship Examination\\
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MISCELLANEOUS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Miscellaneous}
+\vspace{\topsep}
+\begin{tightemize}
+\item Built a Smart Mirror as part of Programming Club Summer Project.
+  \href{https://pclub.in/project/2016/07/06/smartmirror.html}{Link}
+\item Developed a simple Android App which acts as a WebSocket Client
+  for a WebSocket Server for the Real Life FunGame Mafia
+\item Contribute to open source projects like pdf.js \& thelounge
+\item Won Fresher\textquoteright{}s Science Quiz
+\item Among the top 15 teams in India in CSAW 2016 Capture The Flag
+\end{tightemize}
+\end{minipage} 
+\end{document}  \documentclass[]{article}

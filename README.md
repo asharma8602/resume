@@ -1,6 +1,16 @@
 # Resume
 My Curriculum Vitae
 
-Inspired from:
-sakshamsharma/resume
-ishikasoni111/Resume
+Extended Deedy-Resume template with header of Friggieri-CV
+
+Compile Stylish with:
+
+``` shell
+  xelatex resume.tex
+```
+
+Compile Printer Friendly with:
+
+``` shell
+  xelatex "\def\cvprint{1} \input{resume.tex}"
+```
