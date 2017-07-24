@@ -1,78 +1,70 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+\usepackage{multicol}     %% Allows to create more than two columns
+\usepackage{array}        %% For adjusting column widths
+\usepackage{fontawesome}
+\usepackage[hidelinks, unicode]{hyperref}
+\usepackage{tabularx}
+\usepackage{parallel}
+\usepackage{flowfram, calc}
+\usepackage[compact]{titlesec}
 
 
-\documentclass[11pt, a4paper]{awesome-cv}
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-\fontdir[fonts/]
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-darknight}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\newcommand{\cventry}[5]{
+  {\small \textbf{#2}} \hfill \textit{\footnotesize #3} \\
+  {\footnotesize \textit{#1} \hfill #4}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
+  #5
+  \vspace{1mm}
+}
 
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{false}
+\newcommand{\smallcventry}[5]{
+  {\small \textbf{#2} #3}\hfill \textit{\footnotesize #4} \\
+  {\footnotesize \textit{#1} \hfill #5}
+  \vspace{1mm}
+}
 
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\newdynamicframe{\textwidth}{.2\textheight}{0pt}{.8\textheight}[upper]
+% \setdynamicframe*{upper}{style=centering}
 
+\setlength{\columnsep}{20mm}
+\setlength{\ffcolumnseprule}{3pt}
+\twocolumninarea{\textwidth}{.8\textheight-5pt}{0pt}{0pt}
+\renewcommand{\ffruledeclarations}{\color[rgb]{0.9,0.9,0.9}}
+\insertvrule{flow}{1}{flow}{2}
 
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./profile.png}
-\name{Yash}{Srivastav}
-\position{Junior Undergraduate{\enskip\cdotp\enskip}Computer Science and Engineering}
-\address{Indian Institute of Technology, Kanpur}
-\mobile{(+91) 705-413-3662}
-\email{yashsriv@(cse.)iitk.ac.in \quad\textbar\quad yash111998@gmail.com}
-\homepage{yashsriv.org}
-\github{yashsriv}
-\linkedin{yashsriv}
-% \twitter{@therealyashsriv}
-% \quote{``There is no fate but what we make."}
+% \fontdir[fonts/]
 
 \begin{document}
-\makecvheader
-\makecvfooter
-  {}
-  {}
-  {\thepage}
+
+\setdynamiccontents*{upper} {
+\noindent
+{\Huge\textbf{Yash Srivastav}} \\
+
+\noindent
+Third Year Undergraduate \hfill yashsriv@(cse.)iitk.ac.in \faEnvelope\\
+Department of Computer Science and Engineering \hfill
+\href{https://yashsriv.org}{https://yashsriv.org \faHome}\\
+Indian Institute of Technology, Kanpur \hfill
+\href{https://github.com/yashsriv}{yashsriv \faGithub}\\
+\hfill +91-7054133662 \faMobile
 
 \input{sections/education.tex}
+}
 \input{sections/academic.tex}
-\input{sections/experience.tex}
 \input{sections/project.tex}
 \input{sections/coursework.tex}
+\input{sections/experience.tex}
 \input{sections/positions.tex}
 \input{sections/skills.tex}
-\input{sections/misc.tex}
-% \input{sections/interests.tex}
-
-
 \end{document}
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-engine: xetex
-%%% End:
