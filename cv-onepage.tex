@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[9pt]{extarticle}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -13,10 +13,18 @@
 \usepackage{fontawesome}
 \usepackage[hidelinks, unicode]{hyperref}
 \usepackage[compact]{titlesec}
-
+\usepackage{hyphenat}
 
 \usepackage{enumitem}
-\setitemize{noitemsep,topsep=0pt,parsep=0.5pt,partopsep=0.75pt}
+% \setlist[itemize]{leftmargin=*}
+\setitemize{noitemsep,topsep=0pt,parsep=0.5pt,partopsep=0.75pt,leftmargin=*}
+
+\makeatletter
+\newcommand{\strong}[1]{\@strong{#1}}
+\newcommand{\@@strong}[1]{\textbf{\let\@strong\@@@strong#1}}
+\newcommand{\@@@strong}[1]{\textnormal{\let\@strong\@@strong#1}}
+\let\@strong\@@strong
+\makeatother
 
 \newcommand{\cvsection}[1]{
   \section*{\sc #1}
@@ -36,16 +44,16 @@
 \newcommand{\cvhonor}[4]{\item #1, #2}
 
 \newcommand{\cventry}[5]{
-  {\small \textbf{#2}} \hfill \textit{\footnotesize #3} \\
-  \quad {\footnotesize \textit{#1} \hfill #4}
+  {\small \strong{#2}} \hfill \emph{\footnotesize #3} \\
+  {\footnotesize \emph{#1} \hfill #4}
 
   #5
   \vspace{2mm}
 }
 
 \newcommand{\smallcventry}[6]{
-  {\small \textbf{#2} \hfill #5} \\
-  \quad {\footnotesize \textit{#1, #3} \hfill #4}
+  {\small \strong{#2}} \hfill \emph{\footnotesize #5} \\
+  {\footnotesize \emph{#1, #3} \hfill #4}
   \vspace{2mm}
 }
 
@@ -60,12 +68,16 @@
 \begin{document}
 \pagenumbering{gobble}
 
+\begingroup
+\hyphenpenalty 10000
+\exhyphenpenalty 10000
+
 {\Huge\textbf{\sc Yash Srivastav}}
 \hfill
-yashsriv@(cse.)iitk.ac.in \faEnvelope
+yash111998@gmail.com \faEnvelope
 
 
-Third Year Undergraduate
+Final Year Undergraduate
 \hfill
 \href{https://yashsriv.org}{https://yashsriv.org \faHome}\\
 
@@ -90,7 +102,8 @@ Indian Institute of Technology, Kanpur
   \input{sections/experience.tex}
   \input{sections/positions.tex}
   \input{sections/skills.tex}
-  \input{sections/coursework.tex}
 \end{minipage}
+\input{sections/coursework.tex}
 
+\endgroup
 \end{document}

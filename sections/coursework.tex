@@ -2,26 +2,39 @@
 
 \ifdefined\ONEPAGE
 
-\textbf{CS:} Introduction to Programming(A$*$), Logic in Computer
-Science, Computer Organization, Data Structures and Algorithms, Computing
-Laboratories - 1(A$*$)
+% \textbf{CS:} Introduction to Programming(A$*$), Logic in Computer
+% Science, Computer Organization, Data Structures and Algorithms, Computing
+% Laboratories - 1(A$*$)
+\begin{tabular*}{\textwidth}{l l l l}
+  Introduction to Programming(A$*$) & Discrete Mathematics  & Computer
+                                                              Organization &
+                                                                             Computer Architecture \\
+  Data Structures and Algorithms & Probability \& Statistics(A$*$) & Computing
+                                                                     Lab
+                                                                     - 1(A$*$) &
+                                                                                 Computing
+                                                                                 Lab
+                                                                                 -
+                                                                                 2(A$*$) \\
+  Compiler Design &  Functional Programming(A$*$) & Computer Systems Security & Computer Networks($i$)
+\end{tabular*}
+
 
 
 % \textbf{Math}: Discrete Math, Probability and Statistics(A$*$)
 
 
 {\footnotesize
-    {A$*$: Grade for exceptional performance}
+    {A$*$: Grade for exceptional performance, $i$: In progress}
 }
 
 \else
 {\fontsize{11pt}{1em}\bodyfontlight\upshape\color{text}
   \begin{tabular*}{\textwidth}{l l l}
-    Introduction to Programming(A$*$)   & Discrete Mathematics  & Logic in
-                                                                    Computer
-                                                                    Science \\
-    Computer Organization & Data Structures and Algorithms & Probability and Statistics(A$*$)\\
-    Computing Laboratories - 1(A$*$)
+    Introduction to Programming(A$*$) & Discrete Mathematics  & Computer Organization \\
+    Computer Architecture & Data Structures and Algorithms & Probability \& Statistics(A$*$) \\ 
+    Computing Laboratories - 1(A$*$) & Computing Laboratories - 2(A$*$) & Compiler Design \\
+    Functional Programming(A$*$) & Computer Systems Security & Computer Networks($i$)
   \end{tabular*}
 }
 {\fontsize{11pt}{1em}\footerfont\upshape\color{text}
@@ -32,6 +45,9 @@ Laboratories - 1(A$*$)
 \vspace{-0.5cm}
 
 \fi
+
 %%% Local Variables:
 %%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: "../cv"
 %%% End:
