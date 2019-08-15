@@ -68,8 +68,6 @@
     \end{cvitems}
   }
 
-\ifdefined\ONEPAGE
-\else
   \cventry
   {Full Stack Developer}
   {\href{http://www.localites.com}{Localites}}
@@ -79,15 +77,17 @@
     \begin{cvitems}
     \item Worked on a web application using the MERN stack.
     \item Rewrote the entire nodejs server in typescript with unit testing in
-      jasmine for better type-checking and code reliability.
+      jasmine for type-checking and code reliability.
     \item Also rewrote react app into an NgRx based angular app for better code
       organization and structure.
+        \ifdefined \ONEPAGE \else
     \item Technologies Used: MongoDB, React, NodeJS, Angular
+        \fi
     \end{cvitems}
   }
-  \fi
 
 \end{cventries}
+\vspace{-2mm}
 
 %%% Local Variables:
 %%% mode: latex

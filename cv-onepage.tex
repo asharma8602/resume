@@ -14,6 +14,8 @@
 \usepackage[hidelinks, unicode]{hyperref}
 \usepackage[compact]{titlesec}
 \usepackage{hyphenat}
+\usepackage{graphicx}
+\graphicspath{ {./media/} }
 
 \usepackage{enumitem}
 % \setlist[itemize]{leftmargin=*}
@@ -58,6 +60,7 @@
 }
 
 \newcommand{\ONEPAGE}{}
+% \newcommand{\PHOTO}{}
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -72,6 +75,7 @@
 \hyphenpenalty 10000
 \exhyphenpenalty 10000
 
+\begin{minipage}[t]{\textwidth}
 {\Huge\textbf{\sc Yash Srivastav}}
 \hfill
 yash111998@gmail.com \faEnvelope
@@ -89,6 +93,13 @@ Department of Computer Science and Engineering
 Indian Institute of Technology, Kanpur
 \hfill
 +91-7054133662 \faMobile \\
+\end{minipage}
+% \begin{minipage}[t]{0.14\textwidth}
+%   \vspace{-2mm}
+%   \begin{center}
+%     \includegraphics[width=0.44\textwidth]{dp}
+%   \end{center} 
+% \end{minipage}
 \input{sections/education.tex}
 \begin{minipage}[t]{0.49\textwidth}
   \vspace{3mm}
